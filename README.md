@@ -2,16 +2,16 @@
 
 # 项目预览：
 
-[传送门]()
+[传送门](https://github.com/ywz85/Xz_cinema/tree/master/preview)
 
-![page]()
+![index](https://github.com/ywz85/Xz_cinema/blob/master/preview/index.png?raw=true)
 
-![page]()
+![cinema](https://github.com/ywz85/Xz_cinema/blob/master/preview/cinema.png?raw=true)
 
-![page]()
+![detail](https://github.com/ywz85/Xz_cinema/blob/master/preview/detail.png?raw=true)
 
-![page]()
+![map](https://github.com/ywz85/Xz_cinema/blob/master/preview/map.png?raw=true)
 
-![page]()
+![mine](https://github.com/ywz85/Xz_cinema/blob/master/preview/mine.png?raw=true)
 
-![page]()
+
