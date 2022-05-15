@@ -1,0 +1,12 @@
+/* components/myButton/index.wxss */
+.round {
+  border-radius: 100rpx !important;
+}
+
+.btn{
+  font-weight: normal !important;
+  width: 240rpx !important;
+  display: inline-block !important; 
+  background-color: crimson !important;
+  color: white !important;
+}

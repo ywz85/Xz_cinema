@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "xz-movie-item" : "/components/xzMovieItem/index"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#666",
+  "backgroundTextStyle": "light"
+}

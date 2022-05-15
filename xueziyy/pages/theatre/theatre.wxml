@@ -1,0 +1,38 @@
+<!-- 顶部导航开始 -->
+<view class="top-nav">
+  <view class="top-nav-inner">
+    <!-- 自动定位城市开始 -->
+    <navigator url="/pages/citylist/citylist"
+      hover-class="none">
+        <view class="city-entry">
+            <text class="city-name">{{cityname}}</text>
+            <text class="city-entry-arrow"></text>
+        </view>
+    </navigator>
+    <!-- 自动定位城市结束 -->
+    
+    <!-- 搜索区域开始 -->
+    <view class="search-view">
+      <view class="search-icon"></view>
+    </view>
+    <!-- 搜索区域结束 -->
+  </view>
+</view>
+<!-- 顶部导航结束 -->
+
+<view class="item mb-line-b"
+  wx:for="{{theatreList}}" wx:key="id"
+  bindtap="tapTheatreItem" data-i="{{index}}">
+  <view class="title-block">
+    <view class="title line-ellipsis">{{item.title}}</view>
+    <view class="location-block">
+        <view class="flex line-ellipsis">{{item.address}}</view>
+        <view class="distance"
+          wx:if="{{item._distance!=0}}">{{item._distance_kmstr}} km</view>
+    </view>
+    <view class="label-block">
+      <text class="allowRefund">电话:</text>
+      <text class="vipTag" >{{item.tel?item.tel:'暂无'}}</text>
+    </view>
+  </view>
+</view>

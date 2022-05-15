@@ -1,0 +1,9 @@
+/* pages/me/me.wxss */
+.bg-cover{
+  background-color: #f03d37;
+  padding: 50rpx;
+  color: white; text-align: center;
+}
+my-button{
+  display: block;  margin: 10rpx;
+}

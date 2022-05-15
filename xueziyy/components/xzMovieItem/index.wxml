@@ -1,0 +1,28 @@
+<!-- 单一影片开始 -->
+<view class="movie-item">
+    <navigator 
+      url="/pages/movie/movie?id={{movieObj.id}}" 
+      hover-class="none">
+      <!-- 图片开始 --> 
+      <view class="movie-item-avatar">
+        <image src="{{movieObj.cover}}"></image>
+      </view>
+      <!-- 图片结束 -->
+      <!-- 内容容器开始 -->
+      <view class="movie-item-content-wrapper">
+          <view class="content">
+              <view class="title">{{movieObj.moviename}}</view>
+              <view class="line-ellipsis">{{movieObj.movietype}}</view>
+              <view class="line-ellipsis">主演:{{movieObj.actors}}</view>
+          </view>
+          <!-- 评分开始 -->
+          <view class="score-wrapper">
+            <view class="score">{{movieObj.score}}</view>
+            <!-- <view>暂无评分</view> -->
+          </view>
+          <!-- 评分结束 -->
+      </view>
+      <!-- 内容容器结束 -->
+    </navigator>
+</view>
+<!-- 单一影片结束 -->   

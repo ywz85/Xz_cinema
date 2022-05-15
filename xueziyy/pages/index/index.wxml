@@ -1,0 +1,33 @@
+<!-- 顶部导航开始 -->
+<view class="top-nav">
+  <view class="top-nav-inner">
+    <!-- 自动定位城市开始 -->
+    <view class="city-entry">
+      <navigator 
+        url="/pages/citylist/citylist"
+        hover-class="none">
+        <text class="city-name">{{cityname}}</text>
+        <text class="city-entry-arrow"></text>
+      </navigator>
+    </view>
+    <!-- 自动定位城市结束 -->
+    <!-- 选项卡开始 -->
+    <view class="switch-hot">
+      <text class="hot-item {{navActive==1?'hot-item-active':''}}" bindtap="tapNav" data-id="1">热映</text>
+      <text class="hot-item {{navActive==2?'hot-item-active':''}}" bindtap="tapNav" data-id="2">待映</text>
+      <text class="hot-item {{navActive==3?'hot-item-active':''}}" bindtap="tapNav" data-id="3">经典</text>
+    </view>
+    <!-- 选项卡结束 -->
+    <!-- 搜索区域开始 -->
+    <view class="search-icon"></view>
+    <!-- 搜索区域结束 -->
+  </view>
+</view>
+<!-- 顶部导航结束 -->
+<!-- 主要区域开始 -->
+<view class="main-container">
+  <xz-movie-item
+    wx:for="{{movies}}" wx:key="id"
+    movieObj="{{item}}"></xz-movie-item>
+</view>
+<!-- 主要区域结束 -->

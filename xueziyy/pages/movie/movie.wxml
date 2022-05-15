@@ -1,0 +1,92 @@
+<!-- 顶部区域开始 -->
+<view class="movie-detail">
+  <view class="movie-filter"></view>
+  <!-- 背景图开始 -->
+  <view 
+    class="poster-background"  
+    style="background-image:url('{{movieInfo.cover}}')">
+  </view>
+  <!-- 背景图结束 -->
+  <view class="detail">
+      <!--海报帧开始-->
+      <view class="poster">
+        <image src="{{movieInfo.cover}}"></image>
+      </view>
+      <!--海报帧结束-->
+      <!-- 内容区域开始 -->
+      <view class="content">
+          <view class="title line-ellipsis">{{movieInfo.moviename}}</view>
+          <view class="score line-ellipsis">{{movieInfo.score}}</view>
+          <view class="type line-ellipsis">主演: {{movieInfo.star}}</view>
+          <view class="type line-ellipsis">{{movieInfo.movietype}}</view>
+          <view class="type line-ellipsis">{{movieInfo.showingon}} 上映</view>
+      </view>
+      <!-- 内容区域结束 -->
+  </view>
+</view>
+<!-- 顶部区域结束 -->
+<!-- 简介区域开始 -->
+<view class="introduction" bindtap="tapIntro">
+  <view class="{{isOpen?'':'line-clamp'}}">
+    {{movieInfo.description}}
+  </view>
+  <view class="more">
+    <image src="/images/{{isOpen ? 'arrow_up.png' : 'arrow_down.png'}}"></image>
+  </view>
+</view>
+<!-- 简介区域结束 -->
+<!-- 演职人员开始 -->
+<view class="actors">
+  <view class="title">演职人员</view>
+  <scroll-view scroll-x="true" class="actors-list">
+    
+    <!-- 导演 -->
+    <view class="actors-item"
+      wx:for="{{movieInfo.director}}" wx:key="index">
+      <image lazy-load src="{{item.avatar}}"></image>
+      <text>导演：{{item.name}}</text> 
+    </view>
+
+    <!-- 演员 -->
+    <view class="actors-item"
+      wx:for="{{movieInfo.actor}}" wx:key="index">
+      <image lazy-load src="{{item.avatar}}"></image>
+      <text>{{item.name}}</text> 
+    </view>   
+
+  </scroll-view>
+</view>
+<!-- 演职人员结束 -->
+<!-- 剧照开始 -->
+<view class="photos">
+  <view class="title">视频和剧照</view>
+  <scroll-view 
+    bindtap="tapImage"
+    scroll-x="true" class="photos-list">
+    <!-- 遍历剧照 -->
+    <view class="photos-item"
+      wx:for="{{movieInfo.thumb}}" wx:key="i">
+      <image 
+        data-i="{{index}}"
+        mode="aspectFill" 
+        lazy-load src="{{item}}"></image>
+
+    </view>
+
+  </scroll-view>
+</view>
+<!-- 剧照结束 -->
+<!-- 评论开始 -->
+<view class="comments">
+    
+    <view class="comment-item"
+      wx:for="{{comments}}" wx:key="_id">
+      <view><image class="avatar" src="/images/nothing.png"></image></view>
+      <view class="right">
+          <view class="nickname">@{{item.nickname}}</view>
+          <view class="comment-content">{{item.content}}</view>
+      </view>
+    </view>
+
+</view>
+<!-- 评论结束 -->

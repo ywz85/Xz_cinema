@@ -1,0 +1,41 @@
+{
+    "pages": [
+        "pages/me/me",
+        "pages/index/index",
+        "pages/citylist/citylist",
+        "pages/movie/movie",
+        "pages/theatre/theatre"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#F03D37",
+        "navigationBarTitleText": "学子影院",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#333",
+        "selectedColor": "#f03d37",
+        "list": [{ 
+            "text": "电影",
+            "pagePath": "pages/index/index",
+            "iconPath": "/images/index_disable.png",
+            "selectedIconPath": "/images/index_enable.png"
+        },{
+            "text": "影院",
+            "pagePath": "pages/theatre/theatre",
+            "iconPath": "/images/theatre_disable.png",
+            "selectedIconPath": "/images/theatre_enable.png"
+        },{
+            "text": "我的",
+            "pagePath": "pages/me/me",
+            "iconPath": "/images/me_disable.png",
+            "selectedIconPath": "/images/me_enable.png"
+        }]
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "赶紧给我你的位置，不给位置手机爆炸~"
+        }
+    },
+    "sitemapLocation": "sitemap.json"
+}
